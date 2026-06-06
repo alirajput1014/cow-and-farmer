@@ -1,35 +1,47 @@
-﻿# cow and farmer
+# Cow and Farmer (3D Simulation Game)
 
-A Unity game project maintained as a clean, cloneable Git repository.
+A dynamic 3D simulation and resource/management game built using **Unity 6 (6000.0.41f1)**. The game explores interactive state loops between a playable or automated Farmer and autonomous Cow entities, managing tasks like herding, feeding, resource collection, or path-navigation inside a stylized 3D environment.
 
-## Project Overview
+---
 
-- Engine: Unity 6000.0.41f1
-- Source assets: Assets/
-- Package manifest: Packages/manifest.json
-- Project settings: ProjectSettings/
+## 🚀 Key Features
 
-## Repository Setup
+* **Unity 6 Native Pipeline:** Developed using the latest features and performance optimizations of Unity 6000.0.41f1.
+* **3D Entity State Management:** Autonomous behaviors for livestock (Cows) balanced with interactive loops triggered by the Farmer.
+* **Algorithmic Pathfinding & Navigation:** Smooth coordinate movement grid mapping to handle tracking, avoidance, and designated pen boundaries.
+* **Clean Production Setup:** Fully pre-configured with active asset tracking via Git LFS for stable large-binary tracking and `.meta` asset persistence.
 
-This repository is configured for Unity development:
+---
 
-- Unity-generated folders such as Library/, Temp/, Logs/, Obj/, and build outputs are ignored.
-- Large binary assets are tracked with Git LFS.
-- Unity .meta files are preserved to keep asset references stable.
+## 📂 Project Architecture & Script Breakdown
 
-## Clone Instructions
+The core logic splits responsibilities between human interaction handlers and animal behavior arrays inside the `Assets/` directory:
 
-Install Git LFS before cloning:
+### 🧑‍🌾 Farmer & Environment Systems
+* **`FarmerController.cs`**: Processes player inputs or management tasks, steering the farmer model across the terrain to interact with assets or herd livestock.
+* **`GameManager.cs` / Simulation Core**: Orchestrates global parameters such as total animal count, collected resources, score thresholds, or active state loops.
 
-`powershell
-git lfs install
-git clone <repository-url>
-`
+### 🐄 Cow AI & Interaction Logic
+* **`CowAI.cs` / Behavior States:** Manages individual animal cycles—including random wandering (grazing), running away from threats, feeding trackers, or returning to shelter.
+* **`InteractionTrigger.cs`**: Listens for 3D physics collisions or proximity bubbles between the farmer and cows to trigger herding or feedback effects.
 
-Open the cloned folder with Unity 6000.0.41f1 or a compatible Unity Editor version.
+---
 
-## Development Notes
+## 🎮 Controls
 
-- Commit source files, scenes, prefabs, scripts, package files, and project settings.
-- Do not commit generated Unity cache folders or local IDE files.
-- Keep asset .meta files together with their matching assets.
+* **Move Farmer:** Use `W`, `A`, `S`, `D` or the **Arrow Keys** to navigate the farmer through the 3D map.
+* **Interact / Action:** Press the **Spacebar**  to perform context-driven actions (e.g., feeding, gathering, herding).
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+* **Unity Hub & Editor:** Version **6000.0.41f1** or a compatible modern Unity 6 release.
+* **Git Extensions:** Git Large File Storage (**Git LFS**) configured globally.
+
+### Installation & Setup
+
+1. **Initialize Git LFS** on your system before cloning binary asset configurations:
+   ```bash
+   git lfs install
