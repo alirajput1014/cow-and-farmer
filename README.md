@@ -3,6 +3,13 @@
 A dynamic 3D simulation and resource/management game built using **Unity 6 (6000.0.41f1)**. The game explores interactive state loops between a playable or automated Farmer and autonomous Cow entities, managing tasks like herding, feeding, resource collection, or path-navigation inside a stylized 3D environment.
 
 ---
+## 🎬 Gameplay Demo
+
+[![Watch Gameplay Demo](https://drive.google.com/thumbnail?id=1WQpaSTH7H7T2oB4uwvkCEkst9oGNF0Q6&sz=w800)](https://drive.google.com/file/d/1WQpaSTH7H7T2oB4uwvkCEkst9oGNF0Q6/view?usp=sharing)
+
+> *Click the thumbnail above to watch the full gameplay demo.*
+
+---
 
 ## 🚀 Key Features
 
